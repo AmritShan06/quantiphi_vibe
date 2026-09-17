@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    background-color: #fee2e2;
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+    background-color: #fca5a5;
+  }
+}
+
+.avatar-pulse-red {
+  animation: pulse-red 1.5s infinite ease-in-out;
+  border: 2px solid #ef4444;
+}

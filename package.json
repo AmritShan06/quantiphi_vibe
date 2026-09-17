@@ -1,0 +1,15 @@
+{
+  "name": "quantiphi",
+  "version": "1.0.0",
+  "description": "Task Management App with Microservice Backend (MVC) and React Frontend",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

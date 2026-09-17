@@ -1,0 +1,16 @@
+{
+  "name": "quantiphi-backend",
+  "version": "1.0.0",
+  "description": "Backend microservices launcher",
+  "scripts": {
+    "postinstall": "npm --prefix api-gateway install && npm --prefix services/user-service install && npm --prefix services/project-service install && npm --prefix services/task-service install",
+    "start:gateway": "cd api-gateway && npm start",
+    "start:user": "cd services/user-service && npm start",
+    "start:project": "cd services/project-service && npm start",
+    "start:task": "cd services/task-service && npm start",
+    "start": "concurrently \"npm run start:gateway\" \"npm run start:user\" \"npm run start:project\" \"npm run start:task\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
